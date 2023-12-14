@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-def print_perimetr(func):
+def print_perimeter(func):
     def wrapper(*args, **kwars):
         return_value = func(*args, **kwars)
         print('Периметр фигуры равен', return_value)
@@ -10,8 +10,8 @@ def print_perimetr(func):
     return wrapper
 
 
-@print_perimetr
-def periment(*args):
+@print_perimeter
+def perimeter(*args):
     values = [float(arg) for arg in args]
     P = 0
     
@@ -21,7 +21,7 @@ def periment(*args):
 
 
 def main():
-    periment(1, 2, 3, 4)
+    perimeter(1, 2, 3, 4)
 
 
 if __name__ == "__main__":
